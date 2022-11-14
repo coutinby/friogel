@@ -1,12 +1,16 @@
 {
   "name": "meu-projeto",
   "version": "0.0.0",
+  "engines":{
+    "node": "19.0.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build --configuration production",
+    "test": "ng test",
+    "json:server": "json-server --watch db.json",
+    "start:app:server": "concurrently --kill-others \"npm run json:server\" \"npm run app\""
   },
   "private": true,
   "dependencies": {
