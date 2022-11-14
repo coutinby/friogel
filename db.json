@@ -1,0 +1,67 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Nicolas",
+      "telefone": "51986586213",
+      "cpfCnpj": "844.254.995-26",
+      "rua": "José Antônio Duarte, 815",
+      "cep": "65-956-180",
+      "descricao": ""
+    },
+    {
+      "id": 2,
+      "nome": "Nicolas",
+      "telefone": "51986586213",
+      "cpfCnpj": "844.254.995-26",
+      "rua": "José Antônio Duarte, 815",
+      "cep": "65-956-180",
+      "descricao": ""
+    },
+    {
+      "nome": "gabrielle",
+      "telefone": "51986586213",
+      "cpfCnpj": "60012488003",
+      "rua": "jose antonio duarte",
+      "cep": "94940180",
+      "descricao": null,
+      "id": 3
+    },
+    {
+      "nome": "gabrielle",
+      "telefone": "51986586213",
+      "cpfCnpj": "60012488003",
+      "rua": "jose antonio duarte",
+      "cep": "94940180",
+      "descricao": null,
+      "id": 4
+    },
+    {
+      "nome": "ssdsd",
+      "telefone": "51986586213",
+      "cpfCnpj": "60012488003",
+      "rua": "jose antonio duarte",
+      "cep": "94940180",
+      "descricao": "sdsdsdssdsdsdsd",
+      "id": 5
+    },
+    {
+      "nome": "friogel",
+      "telefone": "(51)98658-6213",
+      "cpfCnpj": "600.124.880-03",
+      "rua": "jose antonio duarte",
+      "cep": "94.940-180",
+      "descricao": "instalar ar na casa do nicolas dia 16/04/2022",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "nome": "gabrielle",
+      "telefone": "(51)98658-6213",
+      "cpfCnpj": "600.124.880-03",
+      "rua": "jose antonio duarte",
+      "cep": "94.940-180",
+      "descricao": "instalacao"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<div class="card mt-1">
+    <div class="card-header">
+      <div class="float-left">
+        <h4>Clientes</h4>
+      </div>
+      <div class="float-right">
+        <button type="button" class="btn btn-primary" [routerLink]="['novo']">Cadastrar novo cliente</button>
+        <button type="button" class="btn btn-secondary">Atualizar</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover" *ngIf="clientes$ | async as clientes; else loading">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th></th>
+            <th></th>
+            <th>Telefone</th>
+            <th></th>
+            <th></th>
+            <th>CPF/CNPJ</th>
+            <th></th>
+            <th></th>
+            <th>Rua</th>
+            <th></th>
+            <th></th>
+            <th>CEP</th>
+           
+            
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td class="clientes">{{cliente.id}}</td>
+            <td class="clientes">{{cliente.nome}}</td>
+            <td></td>
+            <td></td>
+
+            <td class="clientes">{{cliente.telefone}}</td>
+            <td></td>
+            <td></td>
+
+            <td class="clientes">{{cliente.cpfCnpj}}</td>
+            <td></td>
+            <td></td>
+
+            <td class="clientes">{{cliente.rua}}</td>
+            <td></td>
+            <td></td>
+            
+            <td class="clientes">{{cliente.cep}}</td>
+            <td></td>
+         
+           
+            <td>
+              <span class="float-right">
+                <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(cliente.id)">
+                  Atualizar
+                </button>
+                <button class="btn btn-outline-danger mb-1 btn-sm">
+                  Remover
+                </button>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template #loading>
+        <span>Carregando Clientes...</span>
+      </ng-template>
+    </div>
+  </div>
+  
+  <ng-template #deleteModal>
+    <div class="modal-body text-center">
+      <p>Tem certeza que deseja remover esse cliente?</p>
+      <button type="button" class="btn btn-default">Sim</button>
+      <button type="button" class="btn btn-primary">Nao</button>
+    </div>
+  </ng-template>

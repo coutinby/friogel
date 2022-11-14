@@ -1,0 +1,100 @@
+<form
+  class="needs-validation"
+  novalidate
+  [formGroup]="form"
+  style="padding-top: 10px"
+>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="nome">Nome do cliente:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome"
+        formControlName="nome"
+        [ngClass]="{'is-invalid': submited && hasError('nome')}"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="telefone">Telefone do cliente:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefone"
+        placeholder="Telefone"
+        formControlName="telefone"
+        [ngClass]="{'is-invalid': submited && hasError('telefone')}"
+
+      />
+      <div class="valid-feedback">Por favor, informe o  TELEFONE do cliente</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="cpfCnpj">CPF ou CNPJ do cliente:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cpfCnpj"
+        placeholder="CPF/CNPJ"
+        formControlName="cpfCnpj"
+        [ngClass]="{'is-invalid': submited && hasError('cpfCnpj')}"
+
+      />
+      <div class="valid-feedback">Por favor, informe o CPF ou CNPJ do cliente</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="rua">Endereço do cliente:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="rua"
+        placeholder="Rua"
+        formControlName="rua"
+        [ngClass]="{'is-invalid': submited && hasError('rua')}"
+
+      />
+      <div class="valid-feedback">Por favor, informe a RUA do cliente</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="cep">CEP do cliente:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cep"
+        placeholder="CEP"
+        formControlName="cep"
+        [ngClass]="{'is-invalid': submited && hasError('cep')}"
+
+      />
+      <div class="valid-feedback">Por favor, informe o CEP do cliente</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-sm-12">
+      <label for="descricao" >Descrição do que foi feito:</label>
+      <textarea
+        class="form-control"
+        id="descricao"
+        rows="40"
+        formControlName="descricao"
+      ></textarea>
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+  </div>
+  <div style="margin-top: 10px">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+      Salvar
+    </button>
+    <button type="button" class="btn btn-default" (click)="onCancel()">
+      Cancelar
+    </button>
+  </div>
+</form>
